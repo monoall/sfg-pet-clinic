@@ -1,4 +1,4 @@
-package com.gmail.hookmailua.sfgpetclinic.model;
+package com.gmail.hookmailua.model;
 
 public class Person {
 
