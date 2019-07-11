@@ -1,4 +1,4 @@
-package com.gmail.hookmailua.services;
+package com.gmail.hookmailua.petclinic.services;
 
 import java.util.Set;
 

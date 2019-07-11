@@ -1,11 +1,11 @@
-package com.gmail.hookmailua.services.map;
+package com.gmail.hookmailua.petclinic.services.map;
 
-import com.gmail.hookmailua.model.Pet;
-import com.gmail.hookmailua.services.CrudService;
+import com.gmail.hookmailua.petclinic.model.Pet;
+import com.gmail.hookmailua.petclinic.services.PetService;
 
 import java.util.Set;
 
-public class PetServiceMap extends AbstractMapService<Pet, Long> implements CrudService<Pet, Long> {
+public class PetServiceMap extends AbstractMapService<Pet, Long> implements PetService {
     @Override
     public Set<Pet> findAll() {
         return super.findAll();

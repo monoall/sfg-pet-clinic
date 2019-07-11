@@ -1,4 +1,4 @@
-package com.gmail.hookmailua.services.map;
+package com.gmail.hookmailua.petclinic.services.map;
 
 import java.util.HashMap;
 import java.util.HashSet;

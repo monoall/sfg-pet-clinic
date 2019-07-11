@@ -1,4 +1,4 @@
-package com.gmail.hookmailua.model;
+package com.gmail.hookmailua.petclinic.model;
 
 import java.time.LocalDate;
 
