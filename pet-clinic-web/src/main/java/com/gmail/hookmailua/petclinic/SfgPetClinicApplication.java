@@ -1,4 +1,4 @@
-package com.mail.hookmailua.petclinic;
+package com.gmail.hookmailua.petclinic;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
