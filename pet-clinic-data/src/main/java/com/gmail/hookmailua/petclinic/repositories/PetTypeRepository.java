@@ -1,8 +1,8 @@
 package com.gmail.hookmailua.petclinic.repositories;
 
 import com.gmail.hookmailua.petclinic.model.PetType;
-import com.gmail.hookmailua.petclinic.services.CrudService;
+import org.springframework.data.repository.CrudRepository;
 
-public interface PetTypeRepository extends CrudService<PetType, Long> {
+public interface PetTypeRepository extends CrudRepository<PetType, Long> {
 
 }
