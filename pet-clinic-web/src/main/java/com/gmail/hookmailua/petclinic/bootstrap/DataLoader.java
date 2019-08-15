@@ -1,10 +1,7 @@
 package com.gmail.hookmailua.petclinic.bootstrap;
 
 import com.gmail.hookmailua.petclinic.model.*;
-import com.gmail.hookmailua.petclinic.services.OwnerService;
-import com.gmail.hookmailua.petclinic.services.PetTypeService;
-import com.gmail.hookmailua.petclinic.services.SpecialtiesService;
-import com.gmail.hookmailua.petclinic.services.VetService;
+import com.gmail.hookmailua.petclinic.services.*;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
@@ -17,13 +14,15 @@ public class DataLoader implements CommandLineRunner {
     private final VetService vetService;
     private final PetTypeService petTypeService;
     private final SpecialtiesService specialtiesService;
+    private final VisitService visitService;
 
     public DataLoader(OwnerService ownerService, VetService vetService, PetTypeService petTypeService,
-                      SpecialtiesService specialtiesService) {
+                      SpecialtiesService specialtiesService, VisitService visitService) {
         this.ownerService = ownerService;
         this.vetService = vetService;
         this.petTypeService = petTypeService;
         this.specialtiesService = specialtiesService;
+        this.visitService = visitService;
     }
 
     @Override
@@ -88,6 +87,13 @@ public class DataLoader implements CommandLineRunner {
         owner2.getPets().add(alexsCat);
 
         ownerService.save(owner2);
+
+        Visit catVisit1 = new Visit();
+        catVisit1.setPet(alexsCat);
+        catVisit1.setDate(LocalDate.now());
+        catVisit1.setDescription("Sneezy Kitty");
+
+        visitService.save(catVisit1);
 
         System.out.println("Loaded Owners...");
 
